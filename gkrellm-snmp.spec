@@ -3,7 +3,7 @@ Summary(es):	SNMP monitor plugin for gkrellm
 Summary(pl):	Plugin gkrellm z monitorem SNMP
 Summary(pt_BR):	Plugin gkrellm para monitoração SNMP
 Name:		gkrellm-snmp
-Version:	0.17
+Version:	0.18
 Release:	1
 License:	GPL
 Group:		X11/Applications
