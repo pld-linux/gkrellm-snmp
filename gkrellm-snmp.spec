@@ -3,12 +3,12 @@ Summary(es):	SNMP monitor plugin for gkrellm
 Summary(pt_BR):	Plugin gkrellm para monitoração SNMP
 Name:		gkrellm-snmp
 Version:	0.14
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://triq.net/gkrellm/gkrellm_snmp-%{version}.tar.gz
 BuildRequires:	gkrellm-devel
-BuildRequires:	ucd-snmp-devel
+BuildRequires:	ucd-snmp-devel >= 4.2.1
 BuildRequires:	imlib-devel
 Requires:	gkrellm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
