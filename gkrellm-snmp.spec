@@ -6,11 +6,6 @@ Version:	0.18
 Release:	3
 License:	GPL
 Group:		X11/Applications
-Group(de):	X11/Applikationen
-Group(es):	X11/Aplicaciones
-Group(pl):	X11/Aplikacje
-Group(pt_BR):	X11/Aplicações
-Group(pt):	X11/Aplicações
 Source0:	http://triq.net/gkrellm/gkrellm_snmp-%{version}.tar.gz
 URL:		http://triq.net/gkrellm.html
 BuildRequires:	gkrellm-devel
