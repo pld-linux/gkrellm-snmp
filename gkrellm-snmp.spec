@@ -1,5 +1,4 @@
 Summary:	SNMP monitor plugin for gkrellm
-Summary(es):	SNMP monitor plugin for gkrellm
 Summary(pl):	Plugin gkrellm z monitorem SNMP
 Summary(pt_BR):	Plugin gkrellm para monitoração SNMP
 Name:		gkrellm-snmp
@@ -20,9 +19,6 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_mandir		%{_prefix}/man
 
 %description
-A GKrellM plugin which lets you monitor SNMP variables.
-
-%description -l es
 A GKrellM plugin which lets you monitor SNMP variables.
 
 %description -l pl
