@@ -2,16 +2,18 @@ Summary:	SNMP monitor plugin for gkrellm
 Summary(pl):	Plugin gkrellm z monitorem SNMP
 Summary(pt_BR):	Plugin gkrellm para monitoração SNMP
 Name:		gkrellm-snmp
-Version:	0.18
-Release:	5
+Version:	0.21
+Release:	0.1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://triq.net/gkrellm/gkrellm_snmp-%{version}.tar.gz
-# Source0-md5:	ff3ad8d37d6573288b0909076073a9a1
+# Source0-md5:	f90d86413fb8f25c4f31a5ed9dc21b98
+Patch0:		%{name}-makefile.patch
 URL:		http://triq.net/gkrellm.html
 BuildRequires:	gkrellm-devel
-BuildRequires:	ucd-snmp-devel >= 4.2.6
 BuildRequires:	imlib-devel
+BuildRequires:	net-snmp-devel
+BuildRequires:	net-snmp-compat-libs
 Requires:	gkrellm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,15 +29,16 @@ Um plugin GKrellM para monitoração de variáveis SNMP.
 
 %prep
 %setup -q -n gkrellm_snmp-%{version}
+%patch0 -p1
 
 %build
-%{__make} CFLAGS="%{rpmcflags}"
+%{__make} CFLAGS="%{rpmcflags}" netsnmp
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_libdir}/gkrellm
+install -d $RPM_BUILD_ROOT%{_libdir}/gkrellm2/plugins
 
-install gkrellm_snmp.so $RPM_BUILD_ROOT%{_libdir}/gkrellm
+install gkrellm_snmp.so $RPM_BUILD_ROOT%{_libdir}/gkrellm2/plugins
 
 %clean
 rm -rf %{buildroot}
@@ -43,4 +46,4 @@ rm -rf %{buildroot}
 %files
 %defattr(644,root,root,755)
 %doc README ChangeLog FAQ TODO
-%attr(755,root,root) %{_libdir}/gkrellm/gkrellm_snmp.so
+%attr(755,root,root) %{_libdir}/gkrellm2/plugins/gkrellm_snmp.so
