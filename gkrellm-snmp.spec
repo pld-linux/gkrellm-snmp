@@ -7,6 +7,7 @@ Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	http://triq.net/gkrellm/gkrellm_snmp-%{version}.tar.gz
+# Source0-md5:	ff3ad8d37d6573288b0909076073a9a1
 URL:		http://triq.net/gkrellm.html
 BuildRequires:	gkrellm-devel
 BuildRequires:	ucd-snmp-devel >= 4.2.6
