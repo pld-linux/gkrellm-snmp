@@ -1,0 +1,11 @@
+--- gkrellm_snmp-0.21/Makefile~	2003-09-21 12:47:38.000000000 +0000
++++ gkrellm_snmp-0.21/Makefile	2003-09-21 14:43:15.730857696 +0000
+@@ -2,7 +2,7 @@
+ 
+ # Linux
+ GTK_CONFIG = pkg-config gtk+-2.0
+-SYSLIB = -lsnmp
++SYSLIB = -lnetsnmp
+ # we need lib crypto if libsnmp has privacy support.
+ SYSLIB += -lcrypto -L/usr/local/ssl/lib -L/usr/ssl/lib
+ 
