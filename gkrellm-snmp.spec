@@ -9,6 +9,7 @@ Group:		X11/Applications
 Group(de):	X11/Applikationen
 Group(pl):	X11/Aplikacje
 Source0:	http://triq.net/gkrellm/gkrellm_snmp-%{version}.tar.gz
+URL:		http://triq.net/gkrellm.html
 BuildRequires:	gkrellm-devel
 BuildRequires:	ucd-snmp-devel >= 4.2.3
 BuildRequires:	imlib-devel
