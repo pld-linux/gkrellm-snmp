@@ -12,11 +12,10 @@ Patch0:		%{name}-makefile.patch
 URL:		http://triq.net/gkrellm.html
 BuildRequires:	gkrellm-devel
 BuildRequires:	imlib-devel
-BuildRequires:	net-snmp-devel
 BuildRequires:	net-snmp-compat-libs
+BuildRequires:	net-snmp-devel
 Requires:	gkrellm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 A GKrellM plugin which lets you monitor SNMP variables.
@@ -32,7 +31,8 @@ Um plugin GKrellM para monitoração de variáveis SNMP.
 %patch0 -p1
 
 %build
-%{__make} CFLAGS="%{rpmcflags}" netsnmp
+%{__make} netsnmp \
+	CFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -41,7 +41,7 @@ install -d $RPM_BUILD_ROOT%{_libdir}/gkrellm2/plugins
 install gkrellm_snmp.so $RPM_BUILD_ROOT%{_libdir}/gkrellm2/plugins
 
 %clean
-rm -rf %{buildroot}
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
