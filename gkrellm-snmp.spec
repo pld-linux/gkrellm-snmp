@@ -1,6 +1,6 @@
 Summary:	SNMP monitor plugin for gkrellm
-Summary(pl):	Plugin gkrellm z monitorem SNMP
-Summary(pt_BR):	Plugin gkrellm para monitoração SNMP
+Summary(pl.UTF-8):   Plugin gkrellm z monitorem SNMP
+Summary(pt_BR.UTF-8):   Plugin gkrellm para monitoraÃ§Ã£o SNMP
 Name:		gkrellm-snmp
 Version:	0.21
 Release:	0.1
@@ -20,11 +20,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A GKrellM plugin which lets you monitor SNMP variables.
 
-%description -l pl
-Plugin GKrellM pozwalaj±cy monitorowaæ zmienne SNMP.
+%description -l pl.UTF-8
+Plugin GKrellM pozwalajÄ…cy monitorowaÄ‡ zmienne SNMP.
 
-%description -l pt_BR
-Um plugin GKrellM para monitoração de variáveis SNMP.
+%description -l pt_BR.UTF-8
+Um plugin GKrellM para monitoraÃ§Ã£o de variÃ¡veis SNMP.
 
 %prep
 %setup -q -n gkrellm_snmp-%{version}
