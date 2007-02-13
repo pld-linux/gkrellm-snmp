@@ -1,6 +1,6 @@
 Summary:	SNMP monitor plugin for gkrellm
-Summary(pl.UTF-8):   Plugin gkrellm z monitorem SNMP
-Summary(pt_BR.UTF-8):   Plugin gkrellm para monitoração SNMP
+Summary(pl.UTF-8):	Plugin gkrellm z monitorem SNMP
+Summary(pt_BR.UTF-8):	Plugin gkrellm para monitoração SNMP
 Name:		gkrellm-snmp
 Version:	0.21
 Release:	0.1
